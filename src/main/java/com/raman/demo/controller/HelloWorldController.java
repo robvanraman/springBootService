@@ -12,7 +12,7 @@ public class HelloWorldController {
         return "Hello";
     }
 
-    @GetMapping("/{id}")
+    @GetMapping("/helloName{id}")
     public  String sayHelloName(@PathVariable String id) {
         return "Hello "  + id;
     }
