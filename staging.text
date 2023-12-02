@@ -1,0 +1,13 @@
+java -jar demo-0.0.1-SNAPSHOT.jar
+
+java -jar "D:\My Programs\Java\demo\target\demo-0.0.1-SNAPSHOT.jar"
+
+java -jar "D:\My Programs\Java\demo\target\demo-0.0.1-SNAPSHOT.jar"
+
+java -jar "D:\My Programs\Java\springBootService\target\demo-0.0.1-SNAPSHOT.jar"
+
+
+D:\My Programs\Java\springBootService\target
+
+
+D:\Program Files (x86)\Eclipse Adoptium\jdk-8.0.362.9-hotspot\
