@@ -1,0 +1,10 @@
+# Ignore Maven build files
+target/
+
+# Ignore IDE-specific files
+.idea/
+*.iml
+
+# Ignore temporary files and directories
+*.tmp/
+*.log
