@@ -4,10 +4,30 @@ java -jar "D:\My Programs\Java\demo\target\demo-0.0.1-SNAPSHOT.jar"
 
 java -jar "D:\My Programs\Java\demo\target\demo-0.0.1-SNAPSHOT.jar"
 
-java -jar "D:\My Programs\Java\springBootService\target\demo-0.0.1-SNAPSHOT.jar"
+    java -jar "D:\My Programs\Java\springBootService\target\demo-0.0.1-SNAPSHOT.jar"
 
 
 D:\My Programs\Java\springBootService\target
 
 
+D:\Program Files (x86)\Eclipse Adoptium\jdk-8.0.362.9-hotspot\
+
+D:\Program Files\.jdks\openjdk-20\bin> java -jar "D:\My Programs\Java\springBootService\target\demo-0.0.1-SNAPSHOT.jar"
+
+
+FROM openjdk:8-jdk-alpine
+MAINTAINER baeldung.com
+COPY target/docker-message-server-1.0.0.jar message-server-1.0.0.jar
+ENTRYPOINT ["java","-jar","/message-server-1.0.0.jar"]
+
+FROM openjdk:17-jdk-slim
+WORKDIR .
+RUN apt-get update && apt-get install -y git
+RUN git clone https://github.com/robvanraman/springBootService.git .
+RUN ./mvnw package -DskipTests
+EXPOSE 8080
+CMD ["java", "-jar", "target/demo-0.0.1-SNAPSHOT.jar"]
+
+
+D:\Program Files\.jdks\openjdk-20\bin
 D:\Program Files (x86)\Eclipse Adoptium\jdk-8.0.362.9-hotspot\
