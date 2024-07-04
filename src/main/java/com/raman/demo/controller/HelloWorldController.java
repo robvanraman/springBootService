@@ -14,6 +14,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
+//http://localhost:8080/swagger-ui/index.html
 @RestController
 public class HelloWorldController {
 
@@ -35,6 +36,19 @@ public class HelloWorldController {
     @GetMapping("/helloName{id}")
     public  String sayHelloName(@PathVariable String id) {
         return "Hello "  + id;
+    }
+
+    @GetMapping("/testOperation")
+    public ResponseEntity<String> testOperation(@RequestParam(required = false) String key) {
+        try {
+
+            String str = "raman " + "worked";
+
+            return new ResponseEntity<>(str, HttpStatus.OK);
+
+        } catch (Exception e) {
+            return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
+        }
     }
 
 
